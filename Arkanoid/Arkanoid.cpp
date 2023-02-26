@@ -30,7 +30,7 @@ int main()
 	};
 
 	//Palette
-	SDL_Rect palette = { 250, 550, 100, 10 };
+	//SDL_Rect palette = { 250, 550, 100, 10 };
 
 	Level level = Level(Level1);
 
@@ -56,9 +56,9 @@ int main()
 		switch (dir)
 		{
 		case LEFT:
-			palette.x -= 5; break;
+			level.MovePalette(-5); break;
 		case RIGHT:
-			palette.x += 5; break;
+			level.MovePalette(5); break;
 		}
 
 		//ball movement
@@ -66,12 +66,12 @@ int main()
 		ball.y += ball_dir_y;
 
 		//collisions ball <> palette
-		if (ball.y >= palette.y - palette.h
-			&& ball.x >= palette.x - ball.w && ball.x <= palette.x + palette.w)
-		{
-			ball_dir_x *= (-1);
-			ball_dir_y *= (-1);
-		}
+		//if (ball.y >= palette.y - palette.h
+		//	&& ball.x >= palette.x - ball.w && ball.x <= palette.x + palette.w)
+		//{
+		//	ball_dir_x *= (-1);
+		//	ball_dir_y *= (-1);
+		//}
 
 		//left wall
 		if (ball.x <= 0)
@@ -97,7 +97,6 @@ int main()
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
 		SDL_RenderFillRect(renderer, &ball);
-		SDL_RenderFillRect(renderer, &palette);
 		rc.RenderLevel(level);
 
 		SDL_RenderPresent(renderer);

@@ -2,6 +2,8 @@
 
 Level::Level(AvailableLevel level)
 {
+	Palette m_Palette;
+
 	if (level == Level1)
 	{
 		m_bricks.emplace_back(Brick(10, 10, 70, 30));
@@ -22,5 +24,12 @@ std::vector<RenderableObject> Level::GetObjectsToRender()
 	{
 			objectsToRender.emplace_back(RenderableObject{ brick.GetX(), brick.GetY(), brick.GetWidth(), brick.GetHeight() });
 	});
+	objectsToRender.emplace_back(RenderableObject{ m_palette.GetX(), m_palette.GetY(), m_palette.GetWidth(), m_palette.GetHeight() });
+
 	return objectsToRender;
+}
+
+void Level::MovePalette(int x)
+{
+	m_palette.Move(x);
 }

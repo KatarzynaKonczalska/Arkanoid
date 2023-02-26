@@ -130,11 +130,13 @@
     <ClCompile Include="Arkanoid.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Palette.cpp" />
     <ClCompile Include="RenderingController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Brick.h" />
     <ClInclude Include="Level.h" />
+    <ClInclude Include="Palette.h" />
     <ClInclude Include="RenderingController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

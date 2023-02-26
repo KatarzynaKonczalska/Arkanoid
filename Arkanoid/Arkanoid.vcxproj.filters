@@ -27,6 +27,9 @@
     <ClCompile Include="RenderingController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Palette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Level.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RenderingController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Palette.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
