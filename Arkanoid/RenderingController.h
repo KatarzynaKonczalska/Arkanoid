@@ -5,8 +5,8 @@
 class RenderingController
 {
 public:
-	RenderingController(SDL_Renderer* renderer);
-	void RenderLevel(Level level);
+	explicit RenderingController(SDL_Renderer* renderer);
+	void RenderLevel(Level const& level);
 
 private:
 	SDL_Renderer* m_renderer;

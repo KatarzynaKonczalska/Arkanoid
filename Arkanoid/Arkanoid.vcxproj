@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arkanoid.cpp" />
+    <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="CollisionController.cpp" />
     <ClCompile Include="Level.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="RenderingController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ball.h" />
     <ClInclude Include="Brick.h" />
     <ClInclude Include="CollisionController.h" />
     <ClInclude Include="Level.h" />

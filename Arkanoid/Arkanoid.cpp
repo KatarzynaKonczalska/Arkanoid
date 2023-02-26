@@ -28,17 +28,13 @@ int main()
 		UP
 	};
 
-	Level level = Level(Level1);
+	auto level = Level(AvailableLevel::Level1);
 	Palette* palette = level.GetPalettePtr();
 	std::vector<Brick>* bricks = level.GetBricksPtr();
+	Ball* ball = level.GetBallPtr();
 
-	RenderingController rc = RenderingController(renderer);
-	CollisionController cc = CollisionController(palette, bricks);
-
-	//Ball
-	SDL_Rect ball = { 250, 450, 10, 10 };
-	int ball_dir_x = 4;
-	int ball_dir_y = 4;
+	auto rc = RenderingController(renderer);
+	auto cc = CollisionController(palette, bricks);
 
 	bool running = true;
 	int dir = 0;
@@ -63,8 +59,8 @@ int main()
 		}
 
 		//ball movement
-		ball.x += ball_dir_x;
-		ball.y += ball_dir_y;
+		//ball.x += ball_dir_x;
+		//ball.y += ball_dir_y;
 
 		//collisions ball <> palette
 		//if (ball.y >= palette.y - palette.h
@@ -75,29 +71,28 @@ int main()
 		//}
 
 		//left wall
-		if (ball.x <= 0)
-		{
-			ball_dir_x *= (-1);
-		}
+		//if (ball.x <= 0)
+		//{
+		//	ball_dir_x *= (-1);
+		//}
 
-		//right wall
-		if (ball.x + ball.w >= RESOLUTION_WIDITH)
-		{
-			ball_dir_x *= (-1);
-		}
+		////right wall
+		//if (ball.x + ball.w >= RESOLUTION_WIDITH)
+		//{
+		//	ball_dir_x *= (-1);
+		//}
 
-		//up wall
-		if (ball.y <= 0)
-		{
-			ball_dir_y *= (-1);
-		}
+		////up wall
+		//if (ball.y <= 0)
+		//{
+		//	ball_dir_y *= (-1);
+		//}
 
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 		SDL_RenderClear(renderer);
 
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
-		SDL_RenderFillRect(renderer, &ball);
 		rc.RenderLevel(level);
 
 		SDL_RenderPresent(renderer);

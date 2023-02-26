@@ -8,6 +8,7 @@ class CollisionController
 {
 public:
 	CollisionController(Palette *Palette, std::vector<Brick>* bricks);
+	bool IsCollision();
 
 private:
 	std::vector<Brick>* m_bricks;

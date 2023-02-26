@@ -1,10 +1,12 @@
 #pragma once
 #include "Brick.h"
 #include "Palette.h"
+#include "Ball.h"
+
 #include <vector>
 #include <algorithm>
 
-enum AvailableLevel
+enum class AvailableLevel
 {
 	Level1
 };
@@ -25,9 +27,12 @@ public:
 	void MovePalette(int x);
 	Palette* GetPalettePtr();
 	std::vector<Brick>* GetBricksPtr();
+	Ball* GetBallPtr();
 
 private:
 	std::vector<Brick> m_bricks;
 	Palette m_palette;
+	Ball m_ball;
+
 };
 

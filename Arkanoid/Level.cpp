@@ -3,8 +3,9 @@
 Level::Level(AvailableLevel level)
 {
 	Palette m_Palette;
+	Ball m_Ball;
 
-	if (level == Level1)
+	if (level == AvailableLevel::Level1)
 	{
 		m_bricks.emplace_back(Brick(10, 10, 70, 30));
 		m_bricks.emplace_back(Brick( 90, 10, 70, 30 ));
@@ -25,6 +26,7 @@ std::vector<RenderableObject> Level::GetObjectsToRender() const
 			objectsToRender.emplace_back(RenderableObject{ brick.GetX(), brick.GetY(), brick.GetWidth(), brick.GetHeight() });
 	});
 	objectsToRender.emplace_back(RenderableObject{ m_palette.GetX(), m_palette.GetY(), m_palette.GetWidth(), m_palette.GetHeight() });
+	objectsToRender.emplace_back(RenderableObject{ m_ball.GetX(), m_ball.GetY(), m_ball.GetWidth(), m_ball.GetHeight() });
 
 	return objectsToRender;
 }
@@ -42,4 +44,9 @@ Palette* Level::GetPalettePtr()
 std::vector<Brick>* Level::GetBricksPtr()
 {
 	return &m_bricks;
+}
+
+Ball* Level::GetBallPtr()
+{
+	return &m_ball;
 }
