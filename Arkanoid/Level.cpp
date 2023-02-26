@@ -16,7 +16,7 @@ Level::Level(AvailableLevel level)
 	}
 }
 
-std::vector<RenderableObject> Level::GetObjectsToRender()
+std::vector<RenderableObject> Level::GetObjectsToRender() const
 {
 	std::vector<RenderableObject> objectsToRender;
 
@@ -32,4 +32,14 @@ std::vector<RenderableObject> Level::GetObjectsToRender()
 void Level::MovePalette(int x)
 {
 	m_palette.Move(x);
+}
+
+Palette* Level::GetPalettePtr()
+{
+	return &m_palette;
+}
+
+std::vector<Brick>* Level::GetBricksPtr()
+{
+	return &m_bricks;
 }

@@ -21,8 +21,10 @@ class Level
 {
 public:
 	Level(AvailableLevel level);
-	std::vector<RenderableObject> GetObjectsToRender();
+	std::vector<RenderableObject> GetObjectsToRender() const;
 	void MovePalette(int x);
+	Palette* GetPalettePtr();
+	std::vector<Brick>* GetBricksPtr();
 
 private:
 	std::vector<Brick> m_bricks;

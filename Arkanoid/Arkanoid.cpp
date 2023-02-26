@@ -4,6 +4,7 @@
 
 #include "Level.h"
 #include "RenderingController.h"
+#include "CollisionController.h"
 
 //3rd party
 #include <SDL2/SDL.h>
@@ -19,8 +20,6 @@ int main()
 	auto renderer = SDL_CreateRenderer(window, -1, 0);
 	SDL_Event e;
 
-	RenderingController rc = RenderingController(renderer);
-
 	enum Direction
 	{
 		DOWN,
@@ -29,10 +28,12 @@ int main()
 		UP
 	};
 
-	//Palette
-	//SDL_Rect palette = { 250, 550, 100, 10 };
-
 	Level level = Level(Level1);
+	Palette* palette = level.GetPalettePtr();
+	std::vector<Brick>* bricks = level.GetBricksPtr();
+
+	RenderingController rc = RenderingController(renderer);
+	CollisionController cc = CollisionController(palette, bricks);
 
 	//Ball
 	SDL_Rect ball = { 250, 450, 10, 10 };
