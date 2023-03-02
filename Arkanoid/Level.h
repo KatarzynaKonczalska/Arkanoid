@@ -22,7 +22,7 @@ struct RenderableObject
 class Level
 {
 public:
-	Level(AvailableLevel level);
+	explicit Level(AvailableLevel level);
 	std::vector<RenderableObject> GetObjectsToRender() const;
 	void MovePalette(int x);
 	Palette* GetPalettePtr();

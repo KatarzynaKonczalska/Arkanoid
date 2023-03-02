@@ -5,6 +5,7 @@
 #include "Level.h"
 #include "RenderingController.h"
 #include "CollisionController.h"
+#include "PhysicsController.h"
 
 //3rd party
 #include <SDL2/SDL.h>
@@ -35,6 +36,9 @@ int main()
 
 	auto rc = RenderingController(renderer);
 	auto cc = CollisionController(palette, bricks);
+	auto pc = PhysicsController();
+
+	cc.Subscribe(std::make_shared<PhysicsController>(pc));
 
 	bool running = true;
 	int dir = 0;

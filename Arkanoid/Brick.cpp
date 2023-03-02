@@ -8,6 +8,11 @@ Brick::Brick(int x, int y, int width, int height)
 	m_height = height;
 }
 
+void Brick::Hit()
+{
+	m_lives -= 1;
+}
+
 int Brick::GetX() const
 {
 	return m_x;

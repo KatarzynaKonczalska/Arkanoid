@@ -5,9 +5,11 @@ class Brick
 	int m_y;
 	int m_width;
 	int m_height;
+	int m_lives;
 
 public:
 	Brick(int x, int y, int width, int height);
+	void Hit();
 
 	int GetX() const;
 	int GetY() const;
