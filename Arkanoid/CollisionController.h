@@ -24,6 +24,8 @@ class CollisionEvent : public IEvent
 public: 
 	explicit CollisionEvent(CollisionType collisionType);
 	CollisionType collisionType;
+
+	EventType GetType() const override;
 };
 
 class CollisionController : public IEventPublisher

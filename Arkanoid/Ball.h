@@ -15,5 +15,7 @@ public:
 	int GetY() const;
 	int GetWidth() const;
 	int GetHeight() const;
+	void ChangeDirection(bool X, bool Y);
+	void Move();
 };
 

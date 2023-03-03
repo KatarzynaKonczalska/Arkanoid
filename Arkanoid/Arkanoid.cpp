@@ -34,7 +34,7 @@ int main()
 
 	auto renderingController = RenderingController(renderer);
 	auto collisionController = CollisionController(palette, bricks, ball);
-	auto physicsController = PhysicsController();
+	auto physicsController = PhysicsController(palette, ball);
 
 	collisionController.Subscribe(std::make_shared<PhysicsController>(physicsController));
 
@@ -61,6 +61,7 @@ int main()
 		}
 
 		collisionController.DetectCollissions();
+		physicsController.BallMovement();
 
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 		SDL_RenderClear(renderer);

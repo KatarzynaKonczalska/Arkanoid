@@ -4,6 +4,11 @@ CollisionEvent::CollisionEvent(CollisionType collisionType) : collisionType(coll
 {
 }
 
+EventType CollisionEvent::GetType() const
+{
+	return EventType::Collision;
+}
+
 CollisionController::CollisionController(Palette* palette, std::vector<Brick>* bricks, Ball* ball) : m_palette(palette), m_bricks(bricks), m_ball(ball)
 {
 }
