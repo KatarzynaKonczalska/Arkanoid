@@ -140,6 +140,7 @@
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Brick.h" />
     <ClInclude Include="CollisionController.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="Events\IEvent.h" />
     <ClInclude Include="Events\ISubscriber.h" />
     <ClInclude Include="Events\IEventPublisher.h" />

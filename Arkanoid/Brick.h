@@ -5,7 +5,7 @@ class Brick
 	int m_y;
 	int m_width;
 	int m_height;
-	int m_lives;
+	int m_lives = 1;
 
 public:
 	Brick(int x, int y, int width, int height);
