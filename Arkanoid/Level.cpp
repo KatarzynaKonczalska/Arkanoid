@@ -31,10 +31,10 @@ std::vector<RenderableObject> Level::GetObjectsToRender() const
 	return objectsToRender;
 }
 
-void Level::MovePalette(int x)
-{
-	m_palette.Move(x);
-}
+//void Level::MovePalette(int x)
+//{
+//	m_palette.Move(x);
+//}
 
 Palette* Level::GetPalettePtr()
 {

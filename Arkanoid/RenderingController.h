@@ -10,8 +10,6 @@ public:
 	void RenderLevel(Level const& level);
 
 private:
-	void InitRendering();
-
 	SDL_Renderer* m_renderer;
 	SDL_Window* m_window;
 };

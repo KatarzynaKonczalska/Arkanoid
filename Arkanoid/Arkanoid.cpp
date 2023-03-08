@@ -32,7 +32,7 @@ int main()
 	{
 		inputController.HandleUserInput();
 		collisionController.DetectCollissions();
-		physicsController.BallMovement();
+		physicsController.Move();
 		renderingController.RenderLevel(level);
 	}
 

@@ -5,9 +5,28 @@ Palette::Palette(int x, int y, int width, int height) : m_x(x), m_y(y), m_width(
 
 }
 
-void Palette::Move(int x)
+void Palette::ChangeDirection(PaletteDirection paletteDirection)
 {
-	m_x += x;
+	if (paletteDirection == PaletteDirection::Left)
+	{
+		m_paletteDirection = PaletteDirection::Left;
+	}
+	else if (paletteDirection == PaletteDirection::Right)
+	{
+		m_paletteDirection = PaletteDirection::Right;
+	}
+}
+
+void Palette::Move()
+{
+	if (m_paletteDirection == PaletteDirection::Left)
+	{
+		m_x -= 5;
+	}
+	else if (m_paletteDirection == PaletteDirection::Right)
+	{
+		m_x += 5;
+	}
 }
 
 int Palette::GetX() const

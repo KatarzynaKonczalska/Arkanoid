@@ -5,9 +5,10 @@ PhysicsController::PhysicsController(Palette* palette, Ball* ball) : m_palette(p
 {
 }
 
-void PhysicsController::BallMovement()
+void PhysicsController::Move()
 {
 	m_ball->Move();
+	m_palette->Move();
 }
 
 void PhysicsController::OnEvent(std::shared_ptr<IEvent> event)
@@ -19,8 +20,8 @@ void PhysicsController::OnEvent(std::shared_ptr<IEvent> event)
 	}
 	if (event->GetType() == EventType::Input)
 	{
-		//TODO handle inputs
-		std::cout << "Input got \n";
+		auto inputEvent = std::static_pointer_cast<InputEvent>(event);
+		ManageInput(inputEvent);
 	}
 	else
 	{
@@ -48,4 +49,21 @@ void PhysicsController::ManageCollision(std::shared_ptr<CollisionEvent> collisio
 		break;
 	}
 }
+
+void PhysicsController::ManageInput(std::shared_ptr<InputEvent> inputEvent)
+{
+	switch (inputEvent->inputType)
+	{
+	case InputType::Left:
+		m_palette->ChangeDirection(PaletteDirection::Left);
+		break; 
+	case InputType::Right:
+		m_palette->ChangeDirection(PaletteDirection::Right);
+		break;
+	default:
+		break;
+	}
+}
+
+
 
