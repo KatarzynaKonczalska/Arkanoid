@@ -2,7 +2,8 @@
 
 enum class EventType
 {
-	Collision
+	Collision,
+	Input
 };
 
 class IEvent

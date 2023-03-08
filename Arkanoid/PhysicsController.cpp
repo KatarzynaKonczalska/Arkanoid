@@ -17,6 +17,11 @@ void PhysicsController::OnEvent(std::shared_ptr<IEvent> event)
 		auto collisionEvent = std::static_pointer_cast<CollisionEvent>(event);
 		ManageCollision(collisionEvent);
 	}
+	if (event->GetType() == EventType::Input)
+	{
+		//TODO handle inputs
+		std::cout << "Input got \n";
+	}
 	else
 	{
 		std::cout << "Incorrect event type. \n";

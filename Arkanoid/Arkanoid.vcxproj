@@ -131,6 +131,7 @@
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="CollisionController.cpp" />
+    <ClCompile Include="InputController.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Palette.cpp" />
     <ClCompile Include="PhysicsController.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="Events\IEvent.h" />
     <ClInclude Include="Events\ISubscriber.h" />
     <ClInclude Include="Events\IEventPublisher.h" />
+    <ClInclude Include="InputController.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Palette.h" />
     <ClInclude Include="PhysicsController.h" />
