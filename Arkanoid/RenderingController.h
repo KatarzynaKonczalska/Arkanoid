@@ -1,14 +1,18 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include "Level.h"
+#include "Constants.h"
 
 class RenderingController
 {
 public:
-	explicit RenderingController(SDL_Renderer* renderer);
+	explicit RenderingController();
 	void RenderLevel(Level const& level);
 
 private:
+	void InitRendering();
+
 	SDL_Renderer* m_renderer;
+	SDL_Window* m_window;
 };
 
