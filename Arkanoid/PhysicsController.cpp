@@ -1,7 +1,7 @@
 #include "PhysicsController.h"
 #include <iostream>
 
-PhysicsController::PhysicsController(Palette* palette, Ball* ball) : m_palette(palette), m_ball(ball)
+PhysicsController::PhysicsController(Palette* palette, Ball* ball, std::vector<Brick>* bricks) : m_palette(palette), m_ball(ball), m_bricks(bricks)
 {
 }
 
@@ -44,6 +44,7 @@ void PhysicsController::ManageCollision(std::shared_ptr<CollisionEvent> collisio
 		break;
 	case CollisionType::Brick:
 		m_ball->ChangeDirection(true, true);
+		collisionEvent->hitBrick->Hit();
 		break;
 	default:
 		break;

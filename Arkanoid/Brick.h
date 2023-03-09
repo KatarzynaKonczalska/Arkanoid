@@ -15,5 +15,6 @@ public:
 	int GetY() const;
 	int GetWidth() const;
 	int GetHeight() const;
+	bool IsAlive() const;
 };
 

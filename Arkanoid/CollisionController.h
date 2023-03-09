@@ -22,8 +22,9 @@ enum class CollisionType
 class CollisionEvent : public IEvent
 {
 public: 
-	explicit CollisionEvent(CollisionType collisionType);
+	explicit CollisionEvent(CollisionType collisionType, Brick* hitBrick = nullptr);
 	CollisionType collisionType;
+	Brick* hitBrick;
 
 	EventType GetType() const override;
 };
@@ -40,6 +41,7 @@ public:
 private:
 	void SendEvent(std::shared_ptr<IEvent> event) override;
 	CollisionType FindCollision() const;
+	Brick* FindBrickCollision() const;
 
 	Palette* m_palette;
 	std::vector<Brick>* m_bricks;

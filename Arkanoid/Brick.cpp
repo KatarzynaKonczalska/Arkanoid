@@ -28,3 +28,10 @@ int Brick::GetHeight() const
 {
 	return m_height;
 }
+
+bool Brick::IsAlive() const
+{
+	if (m_lives > 0) return true;
+	else return false;
+}
+

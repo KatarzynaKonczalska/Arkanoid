@@ -20,7 +20,7 @@ int main()
 
 	auto renderingController = RenderingController();
 	auto collisionController = CollisionController(palette, bricks, ball);
-	auto physicsController = PhysicsController(palette, ball);
+	auto physicsController = PhysicsController(palette, ball, bricks);
 	auto inputController = InputController();
 
 	collisionController.Subscribe(std::make_shared<PhysicsController>(physicsController));
