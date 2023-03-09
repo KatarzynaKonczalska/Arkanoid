@@ -9,7 +9,7 @@ EventType CollisionEvent::GetType() const
 	return EventType::Collision;
 }
 
-CollisionController::CollisionController(Palette* palette, std::vector<Brick>* bricks, Ball* ball) : m_palette(palette), m_bricks(bricks), m_ball(ball)
+CollisionController::CollisionController(Palette& palette, std::vector<Brick>& bricks, Ball& ball) : m_palette(palette), m_bricks(bricks), m_ball(ball)
 {
 }
 
@@ -51,16 +51,16 @@ void CollisionController::SendEvent(std::shared_ptr<IEvent> event)
 CollisionType CollisionController::FindCollision() const
 {
 
-	if (m_ball->GetY() >= m_palette->GetY() - m_palette->GetHeight()
-		&& m_ball->GetX() >= m_palette->GetX() - m_ball->GetWidth() && m_ball->GetX() <= m_palette->GetX() + m_palette->GetWidth())
+	if (m_ball.GetY() >= m_palette.GetY() - m_palette.GetHeight()
+		&& m_ball.GetX() >= m_palette.GetX() - m_ball.GetWidth() && m_ball.GetX() <= m_palette.GetX() + m_palette.GetWidth())
 	{
 		return CollisionType::Palette;
 	}
-	else if ((m_ball->GetX() <= 0) || (m_ball->GetX() + m_ball->GetWidth() >= RESOLUTION_WIDTH))
+	else if ((m_ball.GetX() <= 0) || (m_ball.GetX() + m_ball.GetWidth() >= RESOLUTION_WIDTH))
 	{
 		return CollisionType::Wall;
 	}
-	else if (m_ball->GetY() <= 0)
+	else if (m_ball.GetY() <= 0)
 	{
 		return CollisionType::Ceilling;
 	}
@@ -72,10 +72,10 @@ CollisionType CollisionController::FindCollision() const
 
 Brick* CollisionController::FindBrickCollision() const
 {
-	for (auto& brick : *m_bricks) {
-		if (m_ball->GetX() >= brick.GetX() && m_ball->GetX() <= (brick.GetX() + brick.GetWidth())
-			&& m_ball->GetY() >= brick.GetY()
-			&& m_ball->GetY() <= (brick.GetY() + brick.GetHeight())
+	for (auto& brick : m_bricks) {
+		if (m_ball.GetX() >= brick.GetX() && m_ball.GetX() <= (brick.GetX() + brick.GetWidth())
+			&& m_ball.GetY() >= brick.GetY()
+			&& m_ball.GetY() <= (brick.GetY() + brick.GetHeight())
 			&& brick.IsAlive())
 		{
 			return &brick;

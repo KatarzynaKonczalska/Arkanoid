@@ -14,9 +14,9 @@
 int main()
 {
 	auto level = Level(AvailableLevel::Level1);
-	Palette* palette = level.GetPalettePtr();
-	std::vector<Brick>* bricks = level.GetBricksPtr();
-	Ball* ball = level.GetBallPtr();
+	Palette& palette = level.GetPaletteRef();
+	std::vector<Brick>& bricks = level.GetBricksRef();
+	Ball& ball = level.GetBallRef();
 
 	auto renderingController = RenderingController();
 	auto collisionController = CollisionController(palette, bricks, ball);

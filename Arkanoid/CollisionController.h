@@ -32,7 +32,7 @@ public:
 class CollisionController : public IEventPublisher
 {
 public:
-	CollisionController(Palette* palette, std::vector<Brick>* bricks, Ball* ball);
+	CollisionController(Palette& palette, std::vector<Brick>& bricks, Ball& ball);
 	void DetectCollissions();
 
 	void Subscribe(std::shared_ptr<ISubscriber> subscriber) override;
@@ -43,9 +43,9 @@ private:
 	CollisionType FindCollision() const;
 	Brick* FindBrickCollision() const;
 
-	Palette* m_palette;
-	std::vector<Brick>* m_bricks;
-	Ball* m_ball;
+	Palette& m_palette;
+	std::vector<Brick>& m_bricks;
+	Ball& m_ball;
 	std::vector<std::shared_ptr<ISubscriber>> m_subscribers;
 };
 

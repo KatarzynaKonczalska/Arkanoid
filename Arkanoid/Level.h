@@ -24,9 +24,9 @@ class Level
 public:
 	explicit Level(AvailableLevel level);
 	std::vector<RenderableObject> GetObjectsToRender() const;
-	Palette* GetPalettePtr();
-	std::vector<Brick>* GetBricksPtr();
-	Ball* GetBallPtr();
+	Palette& GetPaletteRef();
+	std::vector<Brick>& GetBricksRef();
+	Ball& GetBallRef();
 
 private:
 	std::vector<Brick> m_bricks;

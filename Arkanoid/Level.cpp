@@ -34,17 +34,18 @@ std::vector<RenderableObject> Level::GetObjectsToRender() const
 	return objectsToRender;
 }
 
-Palette* Level::GetPalettePtr()
+Palette& Level::GetPaletteRef()
 {
-	return &m_palette;
+	return m_palette;
 }
 
-std::vector<Brick>* Level::GetBricksPtr()
+std::vector<Brick>& Level::GetBricksRef()
 {
-	return &m_bricks;
+	return m_bricks;
 }
 
-Ball* Level::GetBallPtr()
+Ball& Level::GetBallRef()
 {
-	return &m_ball;
+	return m_ball;
 }
+
