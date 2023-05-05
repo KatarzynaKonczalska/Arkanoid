@@ -130,27 +130,27 @@
     <ClCompile Include="Arkanoid.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Brick.cpp" />
-    <ClCompile Include="CollisionController.cpp" />
-    <ClCompile Include="InputController.cpp" />
+    <ClCompile Include="Controllers\CollisionController.cpp" />
+    <ClCompile Include="Controllers\InputController.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Palette.cpp" />
-    <ClCompile Include="PhysicsController.cpp" />
-    <ClCompile Include="RenderingController.cpp" />
+    <ClCompile Include="Controllers\PhysicsController.cpp" />
+    <ClCompile Include="Controllers\RenderingController.cpp" />
     <ClCompile Include="Config\UserConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Brick.h" />
-    <ClInclude Include="CollisionController.h" />
+    <ClInclude Include="Controllers\CollisionController.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Events\IEvent.h" />
     <ClInclude Include="Events\ISubscriber.h" />
     <ClInclude Include="Events\IEventPublisher.h" />
-    <ClInclude Include="InputController.h" />
+    <ClInclude Include="Controllers\InputController.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Palette.h" />
-    <ClInclude Include="PhysicsController.h" />
-    <ClInclude Include="RenderingController.h" />
+    <ClInclude Include="Controllers\PhysicsController.h" />
+    <ClInclude Include="Controllers\RenderingController.h" />
     <ClInclude Include="Config\UserConfig.h" />
   </ItemGroup>
   <ItemGroup>

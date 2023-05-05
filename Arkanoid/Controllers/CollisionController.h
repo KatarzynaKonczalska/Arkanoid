@@ -1,13 +1,13 @@
 #pragma once
 #include<vector>
 
-#include "Constants.h"
-#include "Brick.h"
-#include "Ball.h"
-#include "Palette.h"
-#include "Events/IEvent.h"
-#include "Events/IEventPublisher.h"
-#include "Events/ISubscriber.h"
+#include "../Constants.h"
+#include "../Brick.h"
+#include "../Ball.h"
+#include "../Palette.h"
+#include "../Events/IEvent.h"
+#include "../Events/IEventPublisher.h"
+#include "../Events/ISubscriber.h"
 
 enum class CollisionType
 {

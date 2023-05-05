@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 
-#include "Events/IEventPublisher.h"
+#include "../Events/IEventPublisher.h"
 #include <SDL2/SDL_events.h>
 
 enum class InputType

@@ -4,10 +4,10 @@
 
 #include "Constants.h"
 #include "Level.h"
-#include "RenderingController.h"
-#include "CollisionController.h"
-#include "PhysicsController.h"
-#include "InputController.h"
+#include "Controllers/RenderingController.h"
+#include "Controllers/CollisionController.h"
+#include "Controllers/PhysicsController.h"
+#include "Controllers/InputController.h"
 #include "Config/UserConfig.h"
 
 #undef main
@@ -22,7 +22,7 @@ int main()
 	Ball& ball = level.GetBallRef();
 	int score = 0;
 
-	auto renderingController = RenderingController();
+	auto renderingController = RenderingController(userConfig);
 	auto collisionController = CollisionController(palette, bricks, ball);
 	auto physicsController = PhysicsController(palette, ball, bricks);
 	auto inputController = InputController();

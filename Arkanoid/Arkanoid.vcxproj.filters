@@ -24,22 +24,22 @@
     <ClCompile Include="Brick.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RenderingController.cpp">
+    <ClCompile Include="Controllers\RenderingController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Palette.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CollisionController.cpp">
+    <ClCompile Include="Controllers\CollisionController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Ball.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PhysicsController.cpp">
+    <ClCompile Include="Controllers\PhysicsController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InputController.cpp">
+    <ClCompile Include="Controllers\InputController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Config\UserConfig.cpp">
@@ -53,13 +53,13 @@
     <ClInclude Include="Brick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RenderingController.h">
+    <ClInclude Include="Controllers\RenderingController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Palette.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CollisionController.h">
+    <ClInclude Include="Controllers\CollisionController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ball.h">
@@ -74,13 +74,13 @@
     <ClInclude Include="Events\IEventPublisher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicsController.h">
+    <ClInclude Include="Controllers\PhysicsController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InputController.h">
+    <ClInclude Include="Controllers\InputController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Config\UserConfig.h">

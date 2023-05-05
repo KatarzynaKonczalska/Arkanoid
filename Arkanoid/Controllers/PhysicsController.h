@@ -1,10 +1,10 @@
 #pragma once
 #include<vector>
 
-#include "Palette.h"
-#include "Ball.h"
-#include "Brick.h"
-#include "Events/ISubscriber.h"
+#include "../Palette.h"
+#include "../Ball.h"
+#include "../Brick.h"
+#include "../Events/ISubscriber.h"
 #include "CollisionController.h"
 #include "InputController.h"
 
