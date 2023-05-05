@@ -136,6 +136,7 @@
     <ClCompile Include="Palette.cpp" />
     <ClCompile Include="PhysicsController.cpp" />
     <ClCompile Include="RenderingController.cpp" />
+    <ClCompile Include="Config\UserConfig.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
@@ -150,6 +151,10 @@
     <ClInclude Include="Palette.h" />
     <ClInclude Include="PhysicsController.h" />
     <ClInclude Include="RenderingController.h" />
+    <ClInclude Include="Config\UserConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\config.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -49,6 +49,7 @@ void PhysicsController::ManageCollision(std::shared_ptr<CollisionEvent> collisio
 	default:
 		break;
 	}
+	this->Move();
 }
 
 void PhysicsController::ManageInput(std::shared_ptr<InputEvent> inputEvent)

@@ -21,10 +21,9 @@ void CollisionController::DetectCollissions()
 		auto collisionEvent = std::make_shared<CollisionEvent>(CollisionType::Brick, brickCollided);
 		SendEvent(collisionEvent);
 	}
-
-	auto collision = FindCollision();
-	if (collision != CollisionType::None)
+	else
 	{
+		auto collision = FindCollision();
 		auto collisionEvent = std::make_shared<CollisionEvent>(collision);
 		SendEvent(collisionEvent);
 	}
