@@ -132,6 +132,7 @@
     <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Controllers\CollisionController.cpp" />
     <ClCompile Include="Controllers\InputController.cpp" />
+    <ClCompile Include="Controllers\GameStateController.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Palette.cpp" />
     <ClCompile Include="Controllers\PhysicsController.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Events\ISubscriber.h" />
     <ClInclude Include="Events\IEventPublisher.h" />
     <ClInclude Include="Controllers\InputController.h" />
+    <ClInclude Include="Controllers\GameStateController.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Palette.h" />
     <ClInclude Include="Controllers\PhysicsController.h" />

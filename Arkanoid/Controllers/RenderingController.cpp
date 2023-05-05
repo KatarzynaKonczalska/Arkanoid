@@ -52,7 +52,7 @@ void RenderingController::DisplayScore(int score)
 
     // Free the score surface
     SDL_FreeSurface(scoreSurface);
-    SDL_RenderCopy(this->m_renderer, scoreTexture, NULL, &scoreRect);
+    SDL_RenderCopy(this->m_renderer, scoreTexture, nullptr, &scoreRect);
 
     SDL_RenderPresent(m_renderer);
     SDL_DestroyTexture(scoreTexture);
